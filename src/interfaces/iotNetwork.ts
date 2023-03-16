@@ -10,4 +10,5 @@ export interface iotNetworkVariables {
     temperature:            number;
     humidity:               number;
     pollution:              number;
+    datetime?:              number;
 }

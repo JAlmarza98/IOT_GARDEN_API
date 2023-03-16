@@ -29,6 +29,10 @@ export const getGardenData = () => {
 }
 
 const saveGardenData = async(data: iotNetworkResponse) => {
+    const now = new Date(),
+    offset = -(now.getTimezoneOffset() * 60 * 1000);
+    
+    data.variables.datetime = +now + offset;
     const climate = new climateData(data.variables);
     await climate.save();
 }
