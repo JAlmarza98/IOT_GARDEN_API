@@ -1,7 +1,8 @@
-import {app} from './app';
 import * as dotenv from 'dotenv';
 import cors from 'cors';
-import Database from './lib/database';
+import {app} from './app';
+import Database from './lib/dataBase';
+import CronJob from './lib/cronJobs';
 
 dotenv.config()
 
@@ -10,6 +11,9 @@ app.use(cors());
 
 const database = new Database();
 database.init();
+
+const cronJobs = new CronJob();
+cronJobs.initScheduledJobs();
 
 const port = process.env.PORT ? process.env.PORT : 5000;
 
