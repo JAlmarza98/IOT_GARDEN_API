@@ -1,10 +1,10 @@
 import { Application, Router } from 'express';
 import { PingController } from "./controllers/PingController";
-import { IndexController } from "./controllers/IndexController";
+import { weatherController } from './controllers/weather/WeatherController';
 
 const _routes: [string, Router][] = [
-    ['/', IndexController],
     ['/ping', PingController],
+    ['/weather', weatherController]
 ];
 
 export const routes = (app: Application) => {
