@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es2016",
     "module": "commonjs",
-    "rootDir": "./src",
+    "rootDir": ".",
     "moduleResolution": "node",
     "baseUrl": "./src",
     "sourceMap": true,
@@ -14,6 +14,6 @@
     "skipLibCheck": true
   },
   "lib": ["es2015"],
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "test/controllers/PingController.test.ts", "test/utils/isNumber.test.ts"],
   "exclude": ["node_modules"]
 }

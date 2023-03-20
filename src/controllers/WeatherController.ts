@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response, Router } from 'express';
-import { getBetweenDatetime, getTodayDatetime } from '../../utils/getDates';
-import climateData from '../../models/climate.model';
+import { getBetweenDatetime, getTodayDatetime } from '../utils/getDates';
+import climateData from '../models/climate.model';
 
 export const weatherController: Router = Router();
 

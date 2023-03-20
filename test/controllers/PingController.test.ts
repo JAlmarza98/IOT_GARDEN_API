@@ -1,5 +1,5 @@
 import request from 'supertest';
-import { app } from '../app';
+import { app } from '../../src/app';
 
 describe('Test PingController', () => {
   it('Request /ping should return Pong!', async () => {
